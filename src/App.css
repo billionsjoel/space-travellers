@@ -4,6 +4,11 @@
   padding: 0;
 }
 
+html,
+body {
+  width: 100%;
+}
+
 /* global classes */
 
 .d-flex {
@@ -14,11 +19,11 @@
   flex-direction: column;
 }
 
-.jc-center {
+.jc-c {
   justify-content: center;
 }
 
-.ai-center {
+.ai-c {
   align-items: center;
 }
 
@@ -28,4 +33,23 @@
 
 .click {
   cursor: pointer;
+}
+
+ul {
+  list-style: none;
+}
+
+/* header */
+
+.header {
+  justify-content: space-evenly;
+  padding: 15px 0;
+}
+
+.header img {
+  width: 60px;
+}
+
+.header ul {
+  gap: 15px;
 }
