@@ -1,0 +1,7 @@
+## General requirements
+- Make sure that there are no linter errors.
+- Make sure that you used correct Gitflow.
+- Make sure that you documented your work in a professional way.
+- HTML/CSS & JavaScript requirements
+- Follow our list of best practices for HTML & CSS.
+- Follow our list of best practices for JavaScript.
