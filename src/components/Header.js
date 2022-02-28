@@ -2,7 +2,7 @@ import React from 'react';
 
 const Header = () => (
   <header className="header">
-    <img src="../img/logo.png" alt="planet logo" />
+    <img src="./logo.png" alt="planet logo" />
     <nav className="navBar">
       <ul>
         <li>Rockets</li>
