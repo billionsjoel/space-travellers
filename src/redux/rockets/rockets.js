@@ -12,11 +12,13 @@ export const getApiData = () => (dispatch) => {
         rockets.push(data[rocket]);
       });
     });
+
+  dispatch({ type: ADD_ROCKETS, payload: rockets });
 };
 const rocketsReducer = (state = [], action) => {
   switch (action.type) {
     case ADD_ROCKETS:
-      return [...state, action.payload];
+      return action.payload;
     default:
       return state;
   }
