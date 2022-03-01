@@ -1,5 +1,5 @@
 const api = 'https://api.spacexdata.com/v3/missions';
-const GET_MISSIONS = 'missions/GET_MISSIONS';
+const GET_MISSIONS = 'redux/missions/GET_MISSIONS';
 
 const fetchData = () => {
   const data = fetch(api)
