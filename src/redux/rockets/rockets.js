@@ -17,4 +17,14 @@ export const getApiData = () => (dispatch) => fetch(ENDPOINT)
   });
 
 const initialState = [];
-export default getApiData;
+
+const rocketsReducer = (state = initialState, action) => {
+  switch (action.type) {
+    case ADD_ROCKETS:
+      return [...state, action.payload];
+    default:
+      return state;
+  }
+};
+
+export default rocketsReducer;
