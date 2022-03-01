@@ -7,13 +7,28 @@ function navLinks() {
       <nav className="navBar">
         <ul className="d-flex">
           <li className="click">
-            <NavLink className={({ isActive }) => (isActive ? 'active' : 'inactive')} to="/">Rockets</NavLink>
+            <NavLink
+              className={({ isActive }) => (isActive ? 'active' : 'inactive')}
+              to="/"
+            >
+              Rockets
+            </NavLink>
           </li>
           <li className="click">
-            <NavLink to="/missions">Missions</NavLink>
+            <NavLink
+              className={({ isActive }) => (isActive ? 'active' : 'inactive')}
+              to="/missions"
+            >
+              Missions
+            </NavLink>
           </li>
           <li className="click">
-            <NavLink to="/my-profile">My Profile</NavLink>
+            <NavLink
+              className={({ isActive }) => (isActive ? 'active' : 'inactive')}
+              to="/my-profile"
+            >
+              My Profile
+            </NavLink>
           </li>
         </ul>
       </nav>
