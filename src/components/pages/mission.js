@@ -1,7 +1,21 @@
-function mission() {
+import React, { useEffect } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+import { loadMissions } from '../../redux/missions/missions';
+
+const mission = () => {
+  const missionsList = useSelector((state) => state.missions);
+
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    if (!missionsList.length) {
+      dispatch(loadMissions());
+    }
+  }, []);
+
   return (
-    <div>mission</div>
+    <div>Check console for state updates.</div>
   );
-}
+};
 
 export default mission;
