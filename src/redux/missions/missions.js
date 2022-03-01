@@ -8,3 +8,20 @@ const fetchData = () => {
 };
 
 const getMissions = async () => fetchData();
+
+const handleData = (data) => {
+  const missions = [];
+
+  data.forEach((mission) => {
+    const { mission_id: id, mission_name: name, description } = mission;
+    const newMission = {
+      id,
+      name,
+      description,
+      joined: false,
+    };
+    missions.push(newMission);
+  });
+
+  return missions;
+};
