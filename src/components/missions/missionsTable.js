@@ -1,8 +1,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { useDispatch } from 'react-redux';
+import { bookMission } from '../../redux/missions/missions';
 
 const MissionsTable = (props) => {
   const { missionsList } = props;
+  const dispatch = useDispatch();
+
+  const handleBooking = (missionList, id) => {
+    dispatch(bookMission(missionList, id));
+  };
 
   return (
     <table className="missionsTable d-flex">
@@ -19,8 +26,8 @@ const MissionsTable = (props) => {
             <th>{mission.description}</th>
             {!mission.joined && (<th><p className="notMemberBadge bold">NOT A MEMBER</p></th>)}
             {mission.joined && (<th><p className="memberBadge bold">ACTIVE MEMBER</p></th>)}
-            {!mission.joined && (<th><button className="joinMission click" type="button">Join Mission</button></th>)}
-            {mission.joined && (<th><button className="leaveMission click" type="button">Leave Mission</button></th>)}
+            {!mission.joined && (<th><button name={mission.id} className="joinMission click" type="button" onClick={() => handleBooking(missionsList, mission.id)}>Join Mission</button></th>)}
+            {mission.joined && (<th><button name={mission.id} className="leaveMission click" type="button" onClick={() => handleBooking(missionsList, mission.id)}>Leave Mission</button></th>)}
           </tr>
         ))}
       </tbody>
