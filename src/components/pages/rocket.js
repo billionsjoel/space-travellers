@@ -13,14 +13,9 @@ function rocket() {
   }, []);
 
   return (
-    <div className="books">
+    <div className="rockets">
       {rocketList.map((rocket) => (
-        <RocketItem
-          key={rocket.id}
-          id={rocket.id}
-          title={rocket.company}
-          category={rocket.description}
-        />
+        
       ))}
     </div>
   );
