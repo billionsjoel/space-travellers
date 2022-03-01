@@ -10,4 +10,6 @@ const getApiData = () => {
   return apiRocketsData;
 };
 
+const getRockets = () => getApiData();
+
 export default getApiData;
