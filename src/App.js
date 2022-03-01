@@ -11,6 +11,7 @@ function App() {
     <div className="App">
       <Router>
         <Header />
+        <hr />
         <main>
           <Routes>
             <Route path="/" element={<Rocket />} />
