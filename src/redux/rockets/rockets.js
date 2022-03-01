@@ -15,4 +15,6 @@ export const getApiData = () => (dispatch) => fetch(ENDPOINT)
       });
     });
   });
+
+const initialState = [];
 export default getApiData;
