@@ -18,8 +18,8 @@ function rocket() {
         <RocketItem
           key={rocket.id}
           id={rocket.id}
-          title={rocket.company}
-          category={rocket.description}
+          company={rocket.company}
+          description={rocket.description}
         />
       ))}
     </div>
