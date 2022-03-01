@@ -31,7 +31,8 @@
     .bold {
       font-weight: bold;
     }
-    .notMemberBadge {
+    .notMemberBadge,
+    .memberBadge {
       text-align: center;
       color: white;
       padding: 2px;
@@ -40,7 +41,7 @@
       font-size: 13px;
     }
     .memberBadge {
-
+      background-color: rgb(32, 151, 180);
     }
     .joinMission,
     .leaveMission  {
