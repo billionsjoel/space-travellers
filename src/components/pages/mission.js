@@ -3,7 +3,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { loadMissions } from '../../redux/missions/missions';
 
 const mission = () => {
-  const missionsList = useSelector((state) => state.missions);
+  const missionsList = useSelector(({ missionsReducer }) => missionsReducer);
 
   const dispatch = useDispatch();
 
