@@ -1,14 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
-import { bookMission } from '../../redux/missions/missions';
+import { joinMission } from '../../redux/missions/missions';
 
 const MissionsTable = (props) => {
   const { missionsList } = props;
   const dispatch = useDispatch();
 
   const handleBooking = (missionList, id) => {
-    dispatch(bookMission(missionList, id));
+    dispatch(joinMission(missionList, id));
   };
 
   return (
