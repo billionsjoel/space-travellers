@@ -1,64 +1,64 @@
 * {
-	box-sizing: border-box;
-	margin: 0;
-	padding: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 html,
 body {
-	width: 100%;
+  width: 100%;
 }
 
 /* global classes */
 
 .d-flex {
-	display: flex;
+  display: flex;
 }
 
 .col {
-	flex-direction: column;
+  flex-direction: column;
 }
 
 .jc-c {
-	justify-content: center;
+  justify-content: center;
 }
 
 .ai-c {
-	align-items: center;
+  align-items: center;
 }
 
 .bold {
-	font-weight: bold;
+  font-weight: bold;
 }
 
 .click {
-	cursor: pointer;
+  cursor: pointer;
 }
 
 ul {
-	list-style: none;
+  list-style: none;
 }
 
 /* header */
 
 .header {
-	justify-content: space-evenly;
-	padding: 15px 0;
+  justify-content: space-evenly;
+  padding: 15px 0;
 }
 
 .header img {
-	width: 60px;
+  width: 60px;
 }
 
 .header ul {
-	gap: 15px;
+  gap: 15px;
 }
 
 .active {
-	text-decoration: underline;
+  text-decoration: underline;
 }
 
 .inactive {
-	text-decoration: none;
-  color: #000000;
+  text-decoration: none;
+  color: #000;
 }
