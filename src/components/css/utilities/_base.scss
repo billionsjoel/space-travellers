@@ -39,17 +39,19 @@ ul {
   list-style: none;
 }
 
-/* header */
-
-.header {
-  justify-content: space-evenly;
-  padding: 15px 0;
+.active {
+  text-decoration: underline;
 }
 
-.header img {
-  width: 60px;
+.inactive {
+  text-decoration: none;
+  color: #000;
 }
 
-.header ul {
-  gap: 15px;
+.text-center {
+  text-align: center;
+}
+
+.pt-1 {
+  padding-top: 1rem;
 }
