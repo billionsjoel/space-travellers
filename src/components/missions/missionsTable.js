@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import './css/missions.scss';
 
 const MissionsTable = (props) => {
   const { missionsList } = props;
@@ -9,19 +8,19 @@ const MissionsTable = (props) => {
     <table className="missionsTable d-flex">
       <tbody>
         <tr className="tableTitles">
-          <th>Mission</th>
-          <th>Description</th>
-          <th>Status</th>
-          <th aria-label="button join/leave" />
+          <th className="tableCol1">Mission</th>
+          <th className="tableCol2">Description</th>
+          <th className="tableCol3">Status</th>
+          <th className="tableCol4" aria-label="button join/leave" />
         </tr>
         {missionsList.map((mission) => (
           <tr key={mission.id}>
-            <th>{mission.name}</th>
+            <th className="bold">{mission.name}</th>
             <th>{mission.description}</th>
             {!mission.joined && (<th><p>Not a member</p></th>)}
             {!mission.joined && (<th><button type="button">Join Mission</button></th>)}
             {mission.joined && (<th><p>Active Member</p></th>)}
-            {!mission.joined && (<th><button type="button">Leave Mission</button></th>)}
+            {mission.joined && (<th><button type="button">Leave Mission</button></th>)}
           </tr>
         ))}
       </tbody>
