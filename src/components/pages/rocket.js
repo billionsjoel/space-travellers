@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { getApiData } from '../../redux/rockets/rockets';
+import RocketItem from './rockets/rocketItem';
 
 function rocket() {
   const rocketList = useSelector(({ rocketsReducer }) => rocketsReducer);
