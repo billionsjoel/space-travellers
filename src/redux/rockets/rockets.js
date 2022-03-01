@@ -3,13 +3,16 @@ const ENDPOINT = 'https://api.spacexdata.com/v3/rockets';
 
 export const addRocket = (payload) => ({ type: ADD_ROCKETS, payload });
 
-const getApiData = () => {
-  const apiRocketsData = fetch(ENDPOINT)
-    .then((response) => response.json())
-    .then((apiRocketsData) => apiRocketsData);
-  return apiRocketsData;
-};
-
-const getRockets = () => getApiData();
-
+export const getApiData = () => (dispatch) => fetch(ENDPOINT)
+  .then((response) => response.json())
+  .then((data) => {
+    Object.keys(data).forEach((rocket) => {
+      dispatch({
+        type: ADD_ROCKETS,
+        payload: {
+          item_id: rocket, ...data[rocket][0],
+        },
+      });
+    });
+  });
 export default getApiData;
