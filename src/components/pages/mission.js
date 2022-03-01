@@ -1,6 +1,8 @@
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { loadMissions } from '../../redux/missions/missions';
+import MissionsTable from '../missions/missionsTable';
+import '../css/missions.scss';
 
 const mission = () => {
   const missionsList = useSelector(({ missionsReducer }) => missionsReducer);
@@ -14,7 +16,9 @@ const mission = () => {
   }, []);
 
   return (
-    <div>Check console for state updates.</div>
+    <div className="missionsContainer d-flex jc-c">
+      <MissionsTable missionsList={missionsList} />
+    </div>
   );
 };
 
