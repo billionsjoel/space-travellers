@@ -45,4 +45,5 @@ const missionsReducer = (state = [], action) => {
   }
 };
 
-export { missionsReducer, loadMissions };
+export default missionsReducer;
+export { loadMissions };
