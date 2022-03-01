@@ -39,14 +39,12 @@ const loadMissions = () => async (dispatch) => {
 
 const bookMission = (state, id) => (dispatch) => {
   const missions = [...state];
-
   missions.forEach((mission) => {
     if (mission.id === id) {
-      let { joined } = mission;
-      if (joined) {
-        joined = false;
+      if (mission.joined) {
+        mission.joined = false;
       } else {
-        joined = true;
+        mission.joined = true;
       }
     }
   });
