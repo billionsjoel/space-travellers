@@ -1,5 +1,6 @@
 import './css/header.scss';
 import React from 'react';
+import NavLink from './Nav';
 
 const Header = () => (
   <header className="header d-flex ai-c">
