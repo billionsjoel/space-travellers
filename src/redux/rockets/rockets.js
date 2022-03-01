@@ -9,7 +9,7 @@ export const getApiData = () => (dispatch) => fetch(ENDPOINT)
     Object.keys(data).forEach((rocket) => {
       dispatch({
         type: ADD_ROCKETS,
-        payload: { },
+        payload: { ...data[rocket] },
       });
     });
   });
