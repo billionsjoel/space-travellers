@@ -11,7 +11,18 @@ function rocket() {
     }
   }, []);
 
-  return <div>Check Console for data</div>;
+  return (
+    <div className="books">
+      {rocketList.map((rocket) => (
+        <RocketItem
+          key={rocket.id}
+          id={rocket.id}
+          title={rocket.company}
+          category={rocket.description}
+        />
+      ))}
+    </div>
+  );
 }
 
 export default rocket;
