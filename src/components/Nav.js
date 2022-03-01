@@ -1,5 +1,5 @@
 import './css/header.scss';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 function navLinks() {
   return (
@@ -7,13 +7,13 @@ function navLinks() {
       <nav className="navBar">
         <ul className="d-flex">
           <li className="click">
-            <Link to="/">Rockets</Link>
+            <NavLink className={({ isActive }) => (isActive ? 'active' : 'inactive')} to="/">Rockets</NavLink>
           </li>
           <li className="click">
-            <Link to="/missions">Missions</Link>
+            <NavLink to="/missions">Missions</NavLink>
           </li>
           <li className="click">
-            <Link to="/my-profile">My Profile</Link>
+            <NavLink to="/my-profile">My Profile</NavLink>
           </li>
         </ul>
       </nav>
