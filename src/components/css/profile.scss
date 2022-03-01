@@ -1,0 +1,32 @@
+@import './utilities/base';
+@import './utilities/variables';
+
+.profile-container {
+  width: 70%;
+  text-align: left;
+  justify-content: space-between;
+  margin: auto;
+
+  .profile-missions,
+  .profile-rockets {
+    width: 50%;
+  }
+
+  .tableTitle {
+    font-size: 20px;
+    padding: 10px;
+  }
+
+  table {
+    border-collapse: collapse;
+    width: 90%;
+  }
+
+  table tr {
+    border: solid 1px rgb(233, 233, 233);
+  }
+
+  table td {
+    padding: 10px;
+  }
+}
