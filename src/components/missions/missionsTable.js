@@ -19,8 +19,8 @@ const MissionsTable = (props) => {
             <th>{mission.description}</th>
             {!mission.joined && (<th><p className="notMemberBadge bold">NOT A MEMBER</p></th>)}
             {mission.joined && (<th><p className="memberBadge bold">ACTIVE MEMBER</p></th>)}
-            {!mission.joined && (<th><button type="button">Join Mission</button></th>)}
-            {mission.joined && (<th><button type="button">Leave Mission</button></th>)}
+            {!mission.joined && (<th><button className="joinMission" type="button">Join Mission</button></th>)}
+            {mission.joined && (<th><button className="leaveMission" type="button">Leave Mission</button></th>)}
           </tr>
         ))}
       </tbody>

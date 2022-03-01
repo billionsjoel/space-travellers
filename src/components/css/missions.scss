@@ -40,7 +40,17 @@
       font-size: 13px;
     }
     .memberBadge {
-      
+
+    }
+    .joinMission,
+    .leaveMission  {
+      text-align: center;
+      padding: 5px 5px;
+      font-size: 16px;
+    }
+    .leaveMission {
+      color: rgb(255, 66, 66);
+      border: 2px solid rgb(255, 66, 66);
     }
   }
 }
