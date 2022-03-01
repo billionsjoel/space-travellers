@@ -1,4 +1,4 @@
-function rocketItem() {
+function rocketItem({ company, description }) {
   return (
     <div className="rocket-container">
       <div className="image">
