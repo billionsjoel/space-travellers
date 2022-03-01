@@ -20,6 +20,7 @@ function rocket() {
           id={rocket.id}
           company={rocket.company}
           description={rocket.description}
+          image={rocket.flickr_images}
         />
       ))}
     </div>
