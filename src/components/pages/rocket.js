@@ -1,7 +1,5 @@
 function rocket() {
-  return (
-    <div>rocket</div>
-  );
+  return <div>Rockets </div>;
 }
 
 export default rocket;

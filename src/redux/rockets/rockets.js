@@ -3,6 +3,11 @@ const ENDPOINT = 'https://api.spacexdata.com/v3/rockets';
 
 export const addRocket = (payload) => ({ type: ADD_ROCKETS, payload });
 
-export const rocketsReducer = () => null;
+const getApiData = () => {
+  const apiRocketsData = fetch(ENDPOINT)
+    .then((response) => response.json())
+    .then((apiRocketsData) => apiRocketsData);
+  return apiRocketsData;
+};
 
-export default rocketsReducer;
+export default getApiData;
