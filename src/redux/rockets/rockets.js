@@ -13,7 +13,22 @@ const getRockets = async () => fetchData();
 const handleData = (data) => {
   const rockets = [];
 
-
+  data.forEach((rocket) => {
+    const {
+      rocket_id: id,
+      rocket_name: company,
+      description,
+      flickr_images: image,
+    } = rocket;
+    const newRocket = {
+      id,
+      company,
+      description,
+      image,
+      reserved: false,
+    };
+    rockets.push(newRocket);
+  });
 
   return rockets;
 };
