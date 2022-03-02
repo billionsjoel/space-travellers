@@ -5,7 +5,7 @@ import RocketItem from './rocketItem';
 
 const rocket = () => {
   const rocketsList = useSelector(({ rocketsReducer }) => rocketsReducer);
-
+  const dispatch = useDispatch();
 
   }, []);
 
