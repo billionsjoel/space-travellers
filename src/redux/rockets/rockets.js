@@ -67,8 +67,7 @@ const rocketsReducer = (state = [], action) => {
   switch (action.type) {
     case ADD_ROCKETS:
       return action.payload;
-    case RESERVE_ROCKET:
-      return action.playload;
+
     default:
       return state;
   }
