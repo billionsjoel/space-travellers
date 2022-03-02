@@ -9,8 +9,6 @@ const profile = () => {
   const rockets = useSelector(({ rocketsReducer }) => rocketsReducer);
   const reservedRockets = rockets.filter((rockets) => rockets.reserved);
 
-  console.log(reservedRockets);
-
   return (
     <div className="profile-container d-flex jc-c">
       <div className="profile-missions">
