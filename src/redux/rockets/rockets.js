@@ -8,7 +8,6 @@ const fetchData = () => {
   return data;
 };
 
-const getRockets = async () => fetchData();
 
 const handleData = (data) => {
   const rockets = [];
