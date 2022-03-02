@@ -1,7 +1,6 @@
 import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
 import { reserveRocket } from '../../../redux/rockets/rockets';
-import '../../css/missions.scss';
 
 const rocketItem = (props) => {
   const { rocketsList } = props;
@@ -20,10 +19,40 @@ const rocketItem = (props) => {
         <div className="rocket-details">
           <h4>{rocket.company}</h4>
           <p>{rocket.description}</p>
-          {!rocket.reserved && (<div><p className="notMemberBadge bold">NOT A MEMBER</p></div>)}
-          {rocket.reserved && (<div><p className="memberBadge bold">ACTIVE MEMBER</p></div>)}
-          {!rocket.reserved && (<div><button name={rocket.id} className="joinMission click" type="button" onClick={() => handleBooking(rocketsList, rocket.id)}>RESERVE ROCKET</button></div>)}
-          {rocket.reserved && (<div><button name={rocket.id} className="leaveMission click" type="button" onClick={() => handleBooking(rocketsList, rocket.id)}>LEAVE ROCKET</button></div>)}
+          {!rocket.reserved && (
+          <div>
+            <p className="notMemberBadge bold">NOT A MEMBER</p>
+          </div>
+          )}
+          {rocket.reserved && (
+          <div>
+            <p className="memberBadge bold">ACTIVE MEMBER</p>
+          </div>
+          )}
+          {!rocket.reserved && (
+          <div>
+            <button
+              name={rocket.id}
+              className="reserve-btn"
+              type="button"
+              onClick={() => handleBooking(rocketsList, rocket.id)}
+            >
+              RESERVE ROCKET
+            </button>
+          </div>
+          )}
+          {rocket.reserved && (
+          <div>
+            <button
+              name={rocket.id}
+              className="reserve-btn"
+              type="button"
+              onClick={() => handleBooking(rocketsList, rocket.id)}
+            >
+              LEAVE ROCKET
+            </button>
+          </div>
+          )}
         </div>
       </>
     </div>
