@@ -41,6 +41,11 @@
 		border: 1px solid rgb(46, 141, 250);
 	}
 
+	& .danger {
+		background-color: rgb(241, 57, 57);
+		border: 1px solid rgb(241, 57, 57);
+	}
+
 	& .rocket-badge {
 		background-color: rgb(91, 214, 143);
 		padding: 0.3rem;
