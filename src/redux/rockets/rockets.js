@@ -34,7 +34,7 @@ const handleData = (data) => {
 };
 
 const loadRockets = () => async (dispatch) => {
-
+  const rockets = await getRockets();
 
 
 };
