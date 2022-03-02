@@ -36,7 +36,10 @@ const handleData = (data) => {
 const loadRockets = () => async (dispatch) => {
   const rockets = await getRockets();
 
-
+  dispatch({
+    type: ADD_ROCKETS,
+    payload: handleData(rockets),
+  });
 };
 
 const rocketsReducer = (state = [], action) => {
