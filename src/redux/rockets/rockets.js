@@ -1,12 +1,7 @@
 const ADD_ROCKETS = 'redux/rockets/ADD_ROCKETS';
 const ENDPOINT = 'https://api.spacexdata.com/v3/rockets';
 
-const fetchData = () => {
-  const data = fetch(ENDPOINT)
-    .then((response) => response.json())
-    .then((data) => data);
-  return data;
-};
+
 
 const getRockets = async () => fetchData();
 
