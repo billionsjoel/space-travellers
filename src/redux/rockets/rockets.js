@@ -57,10 +57,6 @@ const reserveRocket = (state, id) => (dispatch) => {
     }
   }
 
-  dispatch({
-    type: RESERVE_ROCKET,
-    playload: rockets,
-  });
 };
 
 const rocketsReducer = (state = [], action) => {
