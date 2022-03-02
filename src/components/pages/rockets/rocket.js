@@ -14,7 +14,7 @@ const rocket = () => {
 
   return (
     <div className="rockets">
-      <RocketItem rocketsList={rocketsList} />
+      <RocketItem />
     </div>
   );
 };
