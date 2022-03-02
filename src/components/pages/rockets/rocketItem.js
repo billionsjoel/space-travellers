@@ -26,6 +26,7 @@ rocketItem.propTypes = {
       id: PropTypes.string.isRequired,
       company: PropTypes.string.isRequired,
       description: PropTypes.string.isRequired,
+      image: PropTypes.arrayOf(PropTypes.string).isRequired,
       reserved: PropTypes.bool.isRequired,
     }),
   ).isRequired,
