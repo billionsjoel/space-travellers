@@ -75,4 +75,4 @@ const rocketsReducer = (state = [], action) => {
 };
 
 export default rocketsReducer;
-export { loadRockets, };
+export { loadRockets, reserveRocket };
