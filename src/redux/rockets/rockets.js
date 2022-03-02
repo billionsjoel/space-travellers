@@ -46,16 +46,7 @@ const loadRockets = () => async (dispatch) => {
 const reserveRocket = (state, id) => (dispatch) => {
   const rockets = [...state];
 
-  for (let i = 0; i < rockets.length; i += 1) {
-    const current = rockets[i];
-    if (current.id === id) {
-      if (current.reserved) {
-        current.reserved = false;
-      } else {
-        current.reserved = true;
-      }
-    }
-  }
+
 
   dispatch({
     type: RESERVE_ROCKET,
