@@ -1,4 +1,4 @@
- import PropTypes from 'prop-types';
+import PropTypes from 'prop-types';
 
 const rocketItem = (props) => {
   const { rocketsList } = props;
@@ -20,7 +20,7 @@ const rocketItem = (props) => {
   ));
 };
 
- rocketItem.propTypes = {
+rocketItem.propTypes = {
   rocketsList: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.string.isRequired,
@@ -29,6 +29,6 @@ const rocketItem = (props) => {
       joined: PropTypes.bool.isRequired,
     }),
   ).isRequired,
- };
+};
 
 export default rocketItem;
