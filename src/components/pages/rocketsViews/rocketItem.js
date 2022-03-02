@@ -19,12 +19,7 @@ const rocketItem = (props) => {
         </div>
         <div className="rocket-details">
           <h4>{rocket.company}</h4>
-          <p>
-            {rocket.reserved && (
-            <span className="rocket-badge bold">reserved </span>
-            )}
-            {rocket.description}
-          </p>
+         
           {!rocket.reserved && (
           <div>
             <p className="memberBadge bold">RESERVE ROCKET</p>
