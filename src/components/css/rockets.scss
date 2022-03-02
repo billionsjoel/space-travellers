@@ -76,6 +76,13 @@
 			}
 		}
 
-	
+		& .rocket-details {
+			width: 100%;
+			display: flex;
+			flex-direction: column;
+			justify-content: space-around;
+			line-height: 1.5rem;
+			gap: 1rem;
+		}
 	}
 }
