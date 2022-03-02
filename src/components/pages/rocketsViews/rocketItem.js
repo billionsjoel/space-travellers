@@ -41,7 +41,18 @@ const rocketItem = (props) => {
             </button>
           </div>
           )}
-          
+          {rocket.reserved && (
+          <div>
+            <button
+              name={rocket.id}
+              className="reserve-btn"
+              type="button"
+              onClick={() => handleBooking(rocketsList, rocket.id)}
+            >
+              LEAVE ROCKET
+            </button>
+          </div>
+          )}
         </div>
       </>
     </div>
