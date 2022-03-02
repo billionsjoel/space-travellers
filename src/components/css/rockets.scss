@@ -2,7 +2,14 @@
 @import './utilities/variables';
 
 .rocket-container {
-
+	padding: 1rem;
+	display: flex;
+	justify-content: left;
+	align-items: top;
+	text-align: start;
+	gap: 1rem;
+	width: 70%;
+	margin: auto;
 
 	& .image {
 		height: 50%;
