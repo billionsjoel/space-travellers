@@ -24,11 +24,7 @@ const profile = () => {
       <div className="profile-rockets">
         <p className="bold tableTitle">My Rockets</p>
         <div>
-          {reservedRockets.map((rocket) => (
-            <ul key={rocket.id}>
-              <li>{rocket.company}</li>
-            </ul>
-          ))}
+          
         </div>
       </div>
     </div>
