@@ -20,15 +20,15 @@ const rocketItem = (props) => {
   ));
 };
 
-// rocketItem.propTypes = {
-//  rocketsList: PropTypes.arrayOf(
-//    PropTypes.shape({
-//      id: PropTypes.string.isRequired,
-//      company: PropTypes.string.isRequired,
-//      description: PropTypes.string.isRequired,
-//      joined: PropTypes.bool.isRequired,
-//    }),
-//  ).isRequired,
-// };
+ rocketItem.propTypes = {
+  rocketsList: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string.isRequired,
+      company: PropTypes.string.isRequired,
+      description: PropTypes.string.isRequired,
+      joined: PropTypes.bool.isRequired,
+    }),
+  ).isRequired,
+ };
 
 export default rocketItem;
