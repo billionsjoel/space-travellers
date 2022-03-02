@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Rocket from './components/pages/rockets/rocket';
-import Mission from './components/pages/mission';
+import Mission from './components/pages/missions/mission';
 import Profile from './components/pages/profile';
 import Nomatch from './components/pages/nomatch';
 import Header from './components/Header';
