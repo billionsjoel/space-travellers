@@ -24,7 +24,11 @@ const rocketItem = (props) => {
             <p className="notMemberBadge bold">RESERVE ROCKET</p>
           </div>
           )}
-          
+          {rocket.reserved && (
+          <div>
+            <p className="memberBadge bold">CANCEL ROCKET</p>
+          </div>
+          )}
           {!rocket.reserved && (
           <div>
             <button
