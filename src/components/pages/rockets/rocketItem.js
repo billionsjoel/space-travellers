@@ -3,7 +3,20 @@
 const rocketItem = (props) => {
   const { rocketsList } = props;
   return rocketsList.map((rocket) => (
-    
+    <div className="rocket-container" key={rocket.id}>
+      <>
+        <div className="image">
+          <img src={rocket.image} alt="" />
+        </div>
+        <div className="rocket-details">
+          <h4>{rocket.company}</h4>
+          <p>{rocket.description}</p>
+          <button type="button" value={rocket.reserved}>
+            Reserve
+          </button>
+        </div>
+      </>
+    </div>
   ));
 };
 
