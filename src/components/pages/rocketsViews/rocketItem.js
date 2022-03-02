@@ -34,7 +34,7 @@ const rocketItem = (props) => {
           <div>
             <button
               name={rocket.id}
-              className="reserve-btn primary"
+              className="reserve-btn primary click"
               type="button"
               onClick={() => handleBooking(rocketsList, rocket.id)}
             >
@@ -46,7 +46,7 @@ const rocketItem = (props) => {
           <div>
             <button
               name={rocket.id}
-              className="reserve-btn danger"
+              className="reserve-btn danger click"
               type="button"
               onClick={() => handleBooking(rocketsList, rocket.id)}
             >
