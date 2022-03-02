@@ -1,0 +1,49 @@
+@import './utilities/base';
+@import './utilities/variables';
+
+/* header */
+
+.header {
+  justify-content: space-evenly;
+  padding: 15px 0;
+}
+
+.header img {
+  width: 60px;
+}
+
+.header ul {
+  gap: 15px;
+}
+
+.heading {
+  font-size: 1rem;
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+
+  & h1 {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 641px) {
+  .header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+  }
+
+  .logo {
+    margin-left: -4rem;
+
+    & h1 {
+      font-size: 1.2rem;
+    }
+  }
+}

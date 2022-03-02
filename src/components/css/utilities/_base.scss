@@ -1,0 +1,71 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body,
+main {
+  width: 100%;
+  text-align: center;
+}
+
+/* global classes */
+
+.d-flex {
+  display: flex;
+}
+
+.col {
+  flex-direction: column;
+}
+
+.jc-c {
+  justify-content: center;
+}
+
+.align-items-center {
+  align-items: center;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.click {
+  cursor: pointer;
+}
+
+ul {
+  list-style: none;
+}
+
+.active {
+  text-decoration: underline;
+}
+
+.inactive {
+  text-decoration: none;
+  color: #000;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.pt-1 {
+  padding-top: 1rem;
+}
+
+.p-1 {
+  padding: 1rem;
+}
+
+.m-1 {
+  margin: 1rem;
+}
+
+.mt-1 {
+  margin-top: 1rem;
+}
