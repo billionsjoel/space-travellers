@@ -1,5 +1,6 @@
 const ADD_ROCKETS = 'redux/rockets/ADD_ROCKETS';
 const ENDPOINT = 'https://api.spacexdata.com/v3/rockets';
+const RESERVE_ROCKET = 'redux/missions/RESERVE_ROCKET';
 
 const fetchData = () => {
   const data = fetch(ENDPOINT)
@@ -42,6 +43,26 @@ const loadRockets = () => async (dispatch) => {
   });
 };
 
+const reserveRocket = (state, id) => (dispatch) => {
+  const rockets = [...state];
+
+  for (let i = 0; i < rockets.length; i += 1) {
+    const current = rockets[i];
+    if (current.id === id) {
+      if (current.reserved) {
+        current.reserved = false;
+      } else {
+        current.reserved = true;
+      }
+    }
+  }
+
+  dispatch({
+    type: RESERVE_ROCKET,
+    playload: rockets,
+  });
+};
+
 const rocketsReducer = (state = [], action) => {
   switch (action.type) {
     case ADD_ROCKETS:
@@ -52,4 +73,4 @@ const rocketsReducer = (state = [], action) => {
 };
 
 export default rocketsReducer;
-export { loadRockets };
+export { loadRockets, reserveRocket };
