@@ -29,7 +29,18 @@ const rocketItem = (props) => {
             <p className="memberBadge bold">CANCEL ROCKET</p>
           </div>
           )}
-          
+          {!rocket.reserved && (
+          <div>
+            <button
+              name={rocket.id}
+              className="reserve-btn"
+              type="button"
+              onClick={() => handleBooking(rocketsList, rocket.id)}
+            >
+              RESERVE ROCKET
+            </button>
+          </div>
+          )}
           {rocket.reserved && (
           <div>
             <button
