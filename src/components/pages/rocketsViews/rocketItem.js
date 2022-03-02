@@ -1,3 +1,4 @@
+import '../../css/rockets.scss';
 import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
 import { reserveRocket } from '../../../redux/rockets/rockets';
@@ -18,22 +19,22 @@ const rocketItem = (props) => {
         </div>
         <div className="rocket-details">
           <h4>{rocket.company}</h4>
-          <p>{rocket.description}</p>
+          <p>
+            {rocket.reserved && (
+            <span className="rocket-badge bold">reserved </span>
+            )}
+            {rocket.description}
+          </p>
           {!rocket.reserved && (
           <div>
-            <p className="notMemberBadge bold">RESERVE ROCKET</p>
-          </div>
-          )}
-          {rocket.reserved && (
-          <div>
-            <p className="memberBadge bold">CANCEL ROCKET</p>
+            <p className="memberBadge bold">RESERVE ROCKET</p>
           </div>
           )}
           {!rocket.reserved && (
           <div>
             <button
               name={rocket.id}
-              className="reserve-btn"
+              className="reserve-btn primary click"
               type="button"
               onClick={() => handleBooking(rocketsList, rocket.id)}
             >
@@ -45,11 +46,11 @@ const rocketItem = (props) => {
           <div>
             <button
               name={rocket.id}
-              className="reserve-btn"
+              className="reserve-btn danger click"
               type="button"
               onClick={() => handleBooking(rocketsList, rocket.id)}
             >
-              LEAVE ROCKET
+              CANCEL ROCKET
             </button>
           </div>
           )}

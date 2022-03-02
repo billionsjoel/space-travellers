@@ -4,8 +4,11 @@ import NavLink from './Nav';
 
 const Header = () => (
   <header className="header d-flex align-items-center ">
-    <img src="./logo.png" alt="planet logo" className="click" />
-    <h1 className="heading">Space Traveller&apos;s Hub</h1>
+    <div className="logo">
+      <img src="./logo.png" alt="planet logo" className="click" />
+      <h1 className="heading">Space Traveller&apos;s Hub</h1>
+    </div>
+
     <NavLink />
   </header>
 );
