@@ -1,6 +1,6 @@
 // import PropTypes from 'prop-types';
 
-const rocketItem = () => {
+const rocketItem = (props) => {
   const { rocketsList } = props;
   return rocketsList.map((rocket) => (
     <div className="rocket-container" key={rocket.id}>
