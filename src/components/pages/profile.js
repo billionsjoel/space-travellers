@@ -6,6 +6,11 @@ const profile = () => {
   const missions = useSelector(({ missionsReducer }) => missionsReducer);
   const joinedMissions = missions.filter((missions) => missions.joined);
 
+  const rockets = useSelector(({ rocketsReducer }) => rocketsReducer);
+  const reservedRockets = rockets.filter((rockets) => rockets.reserved);
+
+  console.log(reservedRockets);
+
   return (
     <div className="profile-container d-flex jc-c">
       <div className="profile-missions">
@@ -20,7 +25,13 @@ const profile = () => {
       </div>
       <div className="profile-rockets">
         <p className="bold tableTitle">My Rockets</p>
-        <table />
+        <div>
+          {reservedRockets.map((rocket) => (
+            <ul key={rocket.id}>
+              <li>{rocket.company}</li>
+            </ul>
+          ))}
+        </div>
       </div>
     </div>
   );
