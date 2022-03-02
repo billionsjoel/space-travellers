@@ -1,5 +1,6 @@
 const api = 'https://api.spacexdata.com/v3/missions';
 const GET_MISSIONS = 'redux/missions/GET_MISSIONS';
+const JOIN_MISSION = 'redux/missions/JOIN_MISSION';
 
 const fetchData = () => {
   const data = fetch(api)
@@ -36,9 +37,31 @@ const loadMissions = () => async (dispatch) => {
   });
 };
 
+const joinMission = (state, id) => (dispatch) => {
+  const missions = [...state];
+
+  for (let i = 0; i < missions.length; i += 1) {
+    const current = missions[i];
+    if (current.id === id) {
+      if (current.joined) {
+        current.joined = false;
+      } else {
+        current.joined = true;
+      }
+    }
+  }
+
+  dispatch({
+    type: JOIN_MISSION,
+    playload: missions,
+  });
+};
+
 const missionsReducer = (state = [], action) => {
   switch (action.type) {
     case GET_MISSIONS:
+      return action.playload;
+    case JOIN_MISSION:
       return action.playload;
     default:
       return state;
@@ -46,4 +69,4 @@ const missionsReducer = (state = [], action) => {
 };
 
 export default missionsReducer;
-export { loadMissions };
+export { loadMissions, joinMission };
