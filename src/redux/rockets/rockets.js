@@ -43,12 +43,7 @@ const loadRockets = () => async (dispatch) => {
 };
 
 const rocketsReducer = (state = [], action) => {
-  switch (action.type) {
-    case ADD_ROCKETS:
-      return action.payload;
-    default:
-      return state;
-  }
+
 };
 
 export default rocketsReducer;
