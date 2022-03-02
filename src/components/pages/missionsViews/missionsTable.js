@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
-import { joinMission } from '../../redux/missions/missions';
+import { joinMission } from '../../../redux/missions/missions';
 
 const MissionsTable = (props) => {
   const { missionsList } = props;
