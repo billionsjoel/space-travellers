@@ -7,7 +7,6 @@ const profile = () => {
   const joinedMissions = missions.filter((missions) => missions.joined);
 
   const rockets = useSelector(({ rocketsReducer }) => rocketsReducer);
-  const reservedRockets = rockets.filter((rockets) => rockets.reserved);
 
   return (
     <div className="profile-container d-flex jc-c">
